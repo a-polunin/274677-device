@@ -3,10 +3,189 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+    <header>
+      <div class="wrapper">
+        <div class="logo_container">
+          <a class = "logo" href="#">DEVICE</a>
+        </div>
+        <div class="user_actions">
+          <ul class="user_actions_list">
+            <li><input type="search"></li>
+            <li><a class = "enter_btn" href="#">Войти</a></li>
+            <li> <a class = "compare_btn" href="#">Сравнить</a></li>
+            <li><a class ="basket_btn" href="#">Корзина</a></li>
+          </ul>
+        </div>
+        <div class="main_nav">
+          <ul class="main_nav_list">
+            <li><a href="#" class="catalog_btn">Каталог товаров</a></li>
+            <li><a href="#" class="deliver_btn">Доставка</a></li>
+            <li><a href="#" class="guarantee_btn">Гарантия</a></li>
+            <li><a href="#" class="contacnts_btn">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="slider">
+          <div class="slider_item">
+            <div class="img_container">
+              <img src="#" alt="Selfie Stick">
+            </div>
+            <div class="slider_item_info">
+              <h2 class = "slider_item_header">Делай селфи, как Бен Стиллер!</h2>
+              <span class = "slider_number">01</span>
+              <p>Самая длинная палка для селфи доступна в нашем магазне. Восемь(Восемь, Карл!) метров длиной и весо всешл 5 килограмм.</p>
+              <button class="btn">Подробнее</button>
+              <div class="slider_inputs_container">
+                <input type="radio">
+                <input type="radio">
+                <input type="radio">
+              </div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>8.5 м</td>
+                    <td>5 кг</td>
+                    <td>Карбон</td>
+                  </tr>
+                  <tr>
+                    <td>Длина палки</td>
+                    <td>Вес палки</td>
+                    <td>Материал</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <section class="store_stock">
+          <div class="stoke_item">
+            <img src="#" alt="Виртуальная реальность">
+            <p>Виртуальная реальность</p>
+          </div>
+          <div class="stoke_item">
+            <img src="#" alt="Моноподы для селфи">
+            <p>Моноподы для селфи</p>
+          </div>
+          <div class="stoke_item">
+            <img src="#" alt="Экшн-камеры">
+            <p>Экшн-камеры</p>
+          </div>
+          <div class="stoke_item">
+            <img src="#" alt="Фитнес-браслеты">
+            <p>Фитнес-браслеты</p>
+          </div>
+          <div class="stoke_item">
+            <img src="#" alt="Умные часы">
+            <p>Умные часы</p>
+          </div>
+          <div class="stoke_item">
+            <img src="#" alt="Квадрокоптеры">
+            <p>Квадрокоптеры</p>
+          </div>
+        </div>
+      </section>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
+      <section class = "store_services">
+        <div class="wrapper">
+          <ul class = "services_list">
+            <li>Доставка</li>
+            <li>Гарантия</li>
+            <li>Кредит</li>
+          </ul>
+          <div class="service_info delivery_service">
+            <div class="service_info_text">
+              <h3>Доставка</h3>
+              <p>Мы с удовльствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </div>
+            <img src="#" alt="Доставка">
+          </div>
+        </div>
+      </section>
 
+      <div class="wrapper">
+        <section class = "brands">
+          <div class="brand_item">
+            <img src="#" alt="dji">
+          </div>
+          <div class="brand_item">
+            <img src="#" alt="SP Gadgets">
+          </div>
+          <div class="brand_item">
+            <img src="#" alt="GoPro">
+          </div>
+          <div class="brand_item">
+            <img src="#" alt="VIVE">
+          </div>
+        </section>
+
+        <section class = "about_us">
+          <h3О нас></h3>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul class = "delivery_companies_list">
+            <li>Деловые Линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class = "btn" href="#">Подробнее о нас</a>
+        </section>
+
+        <section class="contacts">
+          <h3>Контакты</h3>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <div class="map_container">
+            <img src="" alt="Улица строителей 15"> <!--Пока что статическая картинка-->
+          </div>
+          <a href="#" class="btn">Напишите нам</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <div class="left_column">
+          <div class="logo_container">
+            <a class = "logo footer_logo" href="#">DEVICE</a>
+          </div>
+          <p class = "address">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="middle_column">
+          <ul class = "footer_nav">
+            <li><a href="#" class="deliver_btn">Доставка</a></li>
+            <li><a href="#" class="guarantee_btn">Гарантия</a></li>
+            <li><a href="#" class="contacnts_btn">Контакты</a></li>
+          </ul>
+          <div class="social">
+            <a class = "social_btn" href="#">
+              <img class = "fb" src="#" alt="Facebook">
+            </a>
+            <a class = "social_btn" href="#">
+              <img class = "insta" src="#" alt="Instagram">
+            </a>
+            <a class = "social_btn" href="#">
+              <img class = "twitter" src="#" alt="Twitter">
+            </a>
+          </div>
+        </div>
+        <div class="right_column">
+          <div class="footer_user_actions">
+            <ul class = "user_actions_list">
+              <li><a class = "enter_btn" href="#">Войти</a></li>
+              <li> <a class = "compare_btn" href="#">Сравнить</a></li>
+              <li><a class ="basket_btn" href="#">Корзина</a></li>
+            </ul>
+            <p class = "telephone">Тел: +7(495)495-95-95</p>
+            <img class = "html_academy_logo" src="#" alt="HTML Academy">
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
