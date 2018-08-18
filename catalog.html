@@ -17,21 +17,30 @@
           <ul class="user_actions_list">
             <li><input type="search"></li>
             <li>
-                <b class="name_surname">Валентин Петухов</b>
+                <a href="#" class="name_surname">Валентин Петухов</a>
                 <a href="#" class="exit">Выйти</a>
             </li>
             <li><a class="compare_btn" href="#">Сравнить</a></li>
             <li><a class="basket_btn" href="#">Корзина</a></li>
           </ul>
         </div>
-        <div class="main_nav">
+        <nav class="main_nav">
           <ul class="main_nav_list">
-            <li><a href="#" class="catalog_btn">Каталог товаров</a></li>
+            <li><a href="#" class="catalog_btn">Каталог товаров</a>
+                <ul class="sub_catalog_list">
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="#">Моноподы для селфи</a></li>
+                    <li><a href="#">Экшн-камеры</a></li>
+                    <li><a href="#">Фитнес-браслеты</a></li>
+                    <li><a href="#">Умные часы</a></li>
+                    <li><a href="#">Квадрокоптеры</a></li>
+                </ul>
+            </li>
             <li><a href="#" class="deliver_btn">Доставка</a></li>
             <li><a href="#" class="guarantee_btn">Гарантия</a></li>
             <li><a href="#" class="contacnts_btn">Контакты</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -47,29 +56,49 @@
             <section class="filter_container">
             <div class="wrapper">
               <h2>Фильтр:</h2>
-                <form action="#" method="POST">
-                  <div class="range_filter">
-                      <b>Стоимость</b>
-                    <input type="range">
-                  </div>
-                  <div class="color_filter">
-                      <input type="checkbox" id="black_color">
-                      <label for="black_color">Черный</label>
-                      <input type="checkbox" id="white_color">
-                      <label for="white_color">Белый</label>
-                      <input type="checkbox" id="blue_color">
-                      <label for="blue_color">Синий</label>
-                      <input type="checkbox" id="red_color">
-                      <label for="red_color">Красный</label>
-                      <input type="checkbox" id="pink_color">
-                      <label for="pink_color">Розовый</label>
-                  </div>
-                  <div class="bluetoth_filter">
-                      <input type="radio" id="yes_bluetoth">
-                      <label for="yes_bluetoth">Есть</label>
-                      <input type="radio" id="no_bluetoth">
-                      <label for="no_bluetoth">Нет</label>
-                  </div>
+                <form class="filter_form" action="#" method="GET">
+                  <fieldset class="range_filter">
+                      <legend>Стоимость</legend>
+                    <input type="range" name="range">
+                  </fieldset>
+                  <fieldset class="color_filter">
+                    <legend>Цвет</legend>
+                    <ul class="color_filter_list">
+                        <li class="color_filter_option">
+                            <input class="visually-hidden" type="checkbox" id="black_color" name="black_color" checked>
+                            <label for="black_color">Черный</label>
+                        </li>
+                        <li class="color_filter_option">
+                            <input class="visually-hidden" type="checkbox" id="white_color" name="white_color">
+                            <label for="white_color">Белый</label>
+                        </li>
+                        <li class="color_filter_option">
+                            <input class="visually-hidden" type="checkbox" id="blue_color" name="blue_color" checked>
+                            <label for="blue_color">Синий</label>
+                        </li>
+                        <li class="color_filter_option">
+                            <input class="visually-hidden" type="checkbox" id="red_color" name="red_color" checked>
+                            <label for="red_color">Красный</label>
+                        </li>
+                        <li class="color_filter_option">
+                            <input class="visually-hidden" type="checkbox" id="pink_color" name="pink_color">
+                            <label for="pink_color">Розовый</label>
+                        </li>
+                      </ul>
+                  </fieldset>
+                  <fieldset class="bluetoth_filter">
+                      <legend>Bluetoth</legend>
+                      <ul class="bluetoth_filter_list">
+                        <li class="bluetoth_filter_option">
+                            <input class="visually-hidden" type="radio" id="yes_bluetoth" name="bluetoth_input" checked value="yes_bluetoth">
+                            <label for="yes_bluetoth">Есть</label>
+                        </li>
+                        <li class="bluetoth_filter_option">
+                            <input class="visually-hidden" type="radio" id="no_bluetoth" name="bluetoth_input" value="no_bluetoth">
+                            <label for="no_bluetoth">Нет</label>
+                        </li>
+                      </ul>
+                  </fieldset>
                   <button class="btn" type="submit">Показать</button>
                 </form>
             </div>
@@ -85,8 +114,8 @@
                         <li><a href="#">По популярности</a></li>
                     </ul>
                     <div class="soring_arrows_container">
-                        <a href="#" class="up_arrow">По возрастанию</a>
-                        <a href="#" class="down_arrow">По убыванию</a>
+                        <a href="#" class="up_arrow visually-hidden">По возрастанию</a>
+                        <a href="#" class="down_arrow visually-hidden">По убыванию</a>
                     </div>
                 </div>
                 <ul class="catalog_items_list">
@@ -182,14 +211,16 @@
                 <div class="footer_user_actions">
                   <ul class="user_actions_list">
                     <li>
-                      <b class="name_surname">Валентин Петухов</b>
+                      <a href="#" class="name_surname">Валентин Петухов</a>
                       <a href="#" class="exit">Выйти</a>
                     </li>
                     <li><a class="compare_btn" href="#">Сравнить</a></li>
                     <li><a class="basket_btn" href="#">Корзина</a></li>
                   </ul>
                   <p class="telephone">Тел: +7(495)495-95-95</p>
-                  <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
+                  <a href="https://htmlacademy.ru/intensive/htmlcss" target="__blank">
+                    <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
+                  </a>
                 </div>
             </div>
         </div>
