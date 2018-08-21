@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,7 +20,11 @@
       <div class="user_actions">
         <ul class="user_actions_list">
           <li>
-            <input type="search">
+            <form action="#" method="POST" class="search_form">
+              <button type="submit">Найти</button>
+              <label for="search_input" class="visually-hidden">Поиск</label>
+              <input type="search" id="search_input" name="search_input">
+            </form>
           </li>
           <li>
             <a href="#" class="name_surname">Валентин Петухов</a>
@@ -118,7 +124,7 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Bluetoth</legend>
+            <legend>Bluetooth</legend>
             <ul>
               <li class="filter_option">
                 <input class="visually-hidden filter_input filter_input_radio" type="radio" id="yes_bluetoth" name="bluetoth_input" checked value="yes_bluetoth">
@@ -159,6 +165,8 @@
           <li class="catalog_item">
             <div class="img_container">
               <img src="img/catalog_amateur_selfie_stick.jpg" alt="Любительская селфи-палка" width="360" height="380">
+              <a href="#"class="btn">В корзину</a>
+              <a href="#" class="add_to_compare">Добавить к сравнению</a>
             </div>
             <div class="catalog_name_and_price">
               <a href="#" class="catalog_item_name">Любительская селфи-палка</a>
@@ -168,6 +176,8 @@
           <li class="catalog_item">
             <div class="img_container">
               <img src="img/catalog_prof_selfie_stick.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add_to_compare">Добавить к сравнению</a>
             </div>
             <div class="catalog_name_and_price">
               <a href="#" class="catalog_item_name">Профессиональная селфи-палка</a>
@@ -177,6 +187,8 @@
           <li class="catalog_item">
             <div class="img_container">
               <img src="img/catalog_unsinkable_selfie_stick.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add_to_compare">Добавить к сравнению</a>
             </div>
             <div class="catalog_name_and_price">
               <a href="#" class="catalog_item_name">Непотопляемая селфи-палка</a>
@@ -186,6 +198,8 @@
           <li class="catalog_item">
             <div class="img_container">
               <img src="img/catalog_folow_me_selfie_stick.jpg" alt="Селфи палка «Следуй за мной»" width="360" height="380">
+              <a href="#" class="btn">В корзину</a>
+              <a href="#" class="add_to_compare">Добавить к сравнению</a>
             </div>
             <div class="catalog_name_and_price">
               <a href="#" class="catalog_item_name">Селфи палка «Следуй за мной»</a>
@@ -194,11 +208,11 @@
           </li>
         </ul>
         <ul class="pagination_list">
-          <li class="pagination_item prev">
-            <a href="#">Назад</a>
+          <li class="pagination_item">
+            <a href="#" class="prev">Назад</a>
           </li>
           <li class="pagination_item">
-            <a href="#">1</a>
+            <a href="#" class="active">1</a>
           </li>
           <li class="pagination_item">
             <a href="#">2</a>
@@ -206,8 +220,8 @@
           <li class="pagination_item">
             <a href="#">3</a>
           </li>
-          <li class="pagination_item next">
-            <a href="#">Вперед</a>
+          <li class="pagination_item">
+            <a href="#" class="next">Вперед</a>
           </li>
         </ul>
       </div>

@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,9 +21,9 @@
         <ul class="user_actions_list">
           <li>
             <form action="#" method="POST" class="search_form">
-              <button type="submit" class="visually-hidden">Найти</button>
               <label for="search_input" class="visually-hidden">Поиск</label>
-              <input type="search" id="search_input" name="search_input">
+              <input type="search" id="search_input" name="search_input" placeholder="Поиск по сайту">
+              <button type="submit" class="searh_btn">Найти</button>
             </form>
           </li>
           <li>
@@ -67,7 +69,7 @@
             <a href="#" class="guarantee_btn">Гарантия</a>
           </li>
           <li>
-            <a href="#" class="contacnts_btn">Контакты</a>
+            <a href="#" class="contacts_btn">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -83,7 +85,7 @@
           <div class="slider_item_info">
             <h2 class="slider_item_header">Делай селфи, как Бен Стиллер!</h2>
             <span class="slider_number">01</span>
-            <p>Самая длинная палка для селфи доступна в нашем магазне. Восемь(Восемь, Карл!) метров длиной и весо всешл 5 килограмм.</p>
+            <p>Самая длинная палка для селфи доступна в нашем магазне. Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a href="#" class="btn">Подробнее</a>
             <table>
               <tbody>
@@ -107,37 +109,49 @@
         <ul class="popular_items_list">
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_vr.svg" alt="Виртуальная реальность" width="97" height="55">
+              <div class="img_container">
+                <img src="img/popular_vr.svg" alt="Виртуальная реальность" width="97" height="55">
+              </div>
               <p>Виртуальная реальность</p>
             </a>
           </li>
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_monopod.svg" alt="Моноподы для селфи" width="86" height="117">
+              <div class="img_container">
+                <img src="img/popular_monopod.svg" alt="Моноподы для селфи" width="86" height="117">
+              </div>
               <p>Моноподы для селфи</p>
             </a>
           </li>
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_action_cam.svg" alt="Экшн-камеры" width="71" height="87">
+              <div class="img_container">
+                <img src="img/popular_action_cam.svg" alt="Экшн-камеры" width="71" height="87">
+              </div>
               <p>Экшн-камеры</p>
             </a>
           </li>
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_fitness.svg" alt="Фитнес-браслеты" width="107" height="65">
+              <div class="img_container">
+                <img src="img/popular_fitness.svg" alt="Фитнес-браслеты" width="107" height="65">
+              </div>
               <p>Фитнес-браслеты</p>
             </a>
           </li>
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_smart_watch.svg" alt="Умные часы" width="56" height="98">
+              <div class="img_container">
+                <img src="img/popular_smart_watch.svg" alt="Умные часы" width="56" height="98">
+              </div>
               <p>Умные часы</p>
             </a>
           </li>
           <li class="popular_item">
             <a href="#">
-              <img src="img/popular_drone.svg" alt="Квадрокоптеры" width="132" height="69">
+              <div class="img_container">
+                <img src="img/popular_drone.svg" alt="Квадрокоптеры" width="132" height="69">
+              </div>
               <p>Квадрокоптеры</p>
             </a>
           </li>
@@ -148,9 +162,15 @@
     <section class="store_services">
       <div class="wrapper">
         <ul class="services_list">
-          <li>Доставка</li>
-          <li>Гарантия</li>
-          <li>Кредит</li>
+          <li>
+            <a href="#" class="btn">Доставка</a>
+          </li>
+          <li>
+            <a href="#" class="btn">Гарантия</a>
+          </li>
+          <li>
+            <a href="#" class="btn">Кредит</a>
+          </li>
         </ul>
         <div class="service_info delivery_service">
           <div class="service_info_text">
@@ -270,7 +290,7 @@
   </footer>
   <section class="popup_write_us">
     <button type="button" class="close_modal visually-hidden">Закрыть</button>
-    <form action="" method="POST" class="write_us_form">
+    <form action="#" method="POST" class="write_us_form">
       <div class="write_us_item">
         <label for="name">Ваше имя:</label>
         <input type="text" name="name" id="name" placeholder="Имя Фамилия">
