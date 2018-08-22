@@ -21,9 +21,9 @@
         <ul class="user_actions_list">
           <li>
             <form action="#" method="POST" class="search_form">
-              <button type="submit">Найти</button>
               <label for="search_input" class="visually-hidden">Поиск</label>
-              <input type="search" id="search_input" name="search_input">
+              <input type="search" id="search_input" name="search_input" placeholder="Поиск по сайту">
+              <button type="submit" class="search_btn">Найти</button>
             </form>
           </li>
           <li>
@@ -81,13 +81,13 @@
     <div class="wrapper">
       <h1 class="catalog_header">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
-        <li>
+        <li class="breadcrumbs_item">
           <a href="#">Главная</a>
         </li>
-        <li>
+        <li class="breadcrumbs_item">
           <a href="#">Каталог товаров</a>
         </li>
-        <li>Моноподы для селфи</li>
+        <li class="breadcrumbs_item">Моноподы для селфи</li>
       </ul>
     </div>
     <section class="filter_container">
@@ -156,7 +156,7 @@
               <a href="#">По популярности</a>
             </li>
           </ul>
-          <div class="soring_arrows_container">
+          <div class="sorting_arrows_container">
             <a href="#" class="up_arrow visually-hidden">По возрастанию</a>
             <a href="#" class="down_arrow visually-hidden">По убыванию</a>
           </div>
@@ -212,13 +212,13 @@
             <a href="#" class="prev">Назад</a>
           </li>
           <li class="pagination_item">
-            <a href="#" class="active">1</a>
+            <a href="#" class="page_number active">1</a>
           </li>
           <li class="pagination_item">
-            <a href="#">2</a>
+            <a href="#" class="page_number">2</a>
           </li>
           <li class="pagination_item">
-            <a href="#">3</a>
+            <a href="#" class="page_number">3</a>
           </li>
           <li class="pagination_item">
             <a href="#" class="next">Вперед</a>
@@ -279,7 +279,7 @@
             </li>
           </ul>
           <p class="telephone">Тел: +7(495)495-95-95</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+          <a class="html_academy_logo_link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
           </a>
         </div>
