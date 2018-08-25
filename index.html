@@ -5,74 +5,75 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="wrapper">
-      <div class="logo_container">
-        <a class="logo" href="#">
-          <img src="img/logo_header.svg" alt="DEVICE" width="163" height="35">
-        </a>
+      <div class="head_container">
+        <div class="logo_container">
+          <a class="logo" href="#">
+            <img src="img/logo_header.svg" alt="DEVICE" width="163" height="35">
+          </a>
+        </div>
+        <div class="user_actions">
+          <ul class="user_actions_list">
+            <li>
+              <form action="#" method="POST" class="search_form">
+                <label for="search_input" class="visually-hidden">Поиск</label>
+                <input type="search" id="search_input" name="search_input" placeholder="Поиск по сайту">
+                <button type="submit" class="search_btn">Найти</button>
+              </form>
+            </li>
+            <li>
+              <a class="enter_btn" href="#">Войти</a>
+            </li>
+            <li>
+              <a class="compare_btn" href="#">Сравнить</a>
+            </li>
+            <li>
+              <a class="basket_btn" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <nav class="main_nav">
+          <ul class="main_nav_list">
+            <li>
+              <a href="#" class="catalog_btn">Каталог товаров</a>
+              <ul class="sub_catalog_list">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="#">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="deliver_btn">Доставка</a>
+            </li>
+            <li>
+              <a href="#" class="guarantee_btn">Гарантия</a>
+            </li>
+            <li>
+              <a href="#" class="contacts_btn">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="user_actions">
-        <ul class="user_actions_list">
-          <li>
-            <form action="#" method="POST" class="search_form">
-              <label for="search_input" class="visually-hidden">Поиск</label>
-              <input type="search" id="search_input" name="search_input" placeholder="Поиск по сайту">
-              <button type="submit" class="search_btn">Найти</button>
-            </form>
-          </li>
-          <li>
-            <a class="enter_btn" href="#">Войти</a>
-          </li>
-          <li>
-            <a class="compare_btn" href="#">Сравнить</a>
-          </li>
-          <li>
-            <a class="basket_btn" href="#">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      <nav class="main_nav">
-        <ul class="main_nav_list">
-          <li>
-            <a href="#" class="catalog_btn">Каталог товаров</a>
-            <ul class="sub_catalog_list">
-              <li>
-                <a href="#">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="deliver_btn">Доставка</a>
-          </li>
-          <li>
-            <a href="#" class="guarantee_btn">Гарантия</a>
-          </li>
-          <li>
-            <a href="#" class="contacts_btn">Контакты</a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </header>
   <main>
@@ -161,22 +162,24 @@
 
     <section class="store_services">
       <div class="wrapper">
-        <ul class="services_list">
-          <li>
-            <a href="#" class="btn">Доставка</a>
-          </li>
-          <li>
-            <a href="#" class="btn">Гарантия</a>
-          </li>
-          <li>
-            <a href="#" class="btn">Кредит</a>
-          </li>
-        </ul>
-        <div class="service_info delivery_service">
-          <div class="service_info_text">
-            <h3 class="section_header">Доставка</h3>
-            <p class="section_description">Мы с удовльствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-              поднимая его на ваш этаж.</p>
+        <div class="services_container">
+          <ul class="services_list">
+            <li>
+              <a href="#" class="btn">Доставка</a>
+            </li>
+            <li>
+              <a href="#" class="btn">Гарантия</a>
+            </li>
+            <li>
+              <a href="#" class="btn">Кредит</a>
+            </li>
+          </ul>
+          <div class="service_info delivery_service">
+            <div class="service_info_text">
+              <h3 class="section_header">Доставка</h3>
+              <p class="section_description">Мы с удовльствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -208,98 +211,158 @@
         </ul>
       </section>
 
-      <section class="about_us">
-        <h3 class="section_header">О нас</h3>
-        <p class="section_description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="section_description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="delivery_companies_list">
-          <li>Деловые Линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="btn" href="#">Подробнее о нас</a>
-      </section>
-
-      <section class="contacts">
-        <h3 class="section_header">Контакты</h3>
-        <p class="section_description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="map_container">
-          <img src="img/map.jpg" alt="Улица строителей 15" width="560" height="222">
-        </div>
-        <a href="#" class="btn">Напишите нам</a>
-      </section>
+      <div class="store_info_container">
+        <section class="about_us">
+          <h3 class="section_header">О нас</h3>
+          <p class="section_description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="section_description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими
+            транспортными компаниями:</p>
+          <ul class="delivery_companies_list">
+            <li>Деловые Линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="btn" href="#">Подробнее о нас</a>
+        </section>
+      
+        <section class="contacts">
+          <h3 class="section_header">Контакты</h3>
+          <p class="section_description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность
+            покупки. Всякое бывает.</p>
+          <div class="map_container">
+            <img src="img/map.jpg" alt="Улица строителей 15" width="560" height="222">
+          </div>
+          <a href="#" class="btn">Напишите нам</a>
+        </section>
+      </div>
     </div>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
-      <div class="left_column">
-        <div class="logo_container">
-          <a class="logo footer_logo" href="#">
-            <img src="img/logo_footer.svg" alt="DEVICE" width="162" height="35">
-          </a>
+      <div class="footer_rows_container">
+        <div class="top_row">
+          <div class="logo_container">
+            <a class="logo footer_logo" href="#">
+              <img src="img/logo_footer.svg" alt="DEVICE" width="162" height="35">
+            </a>
+          </div>
+          <div class="footer_user_actions">
+            <ul class="user_actions_list">
+              <li>
+                <a class="enter_btn" href="#">Войти</a>
+              </li>
+              <li>
+                <a class="compare_btn" href="#">Сравнить</a>
+              </li>
+              <li>
+                <a class="basket_btn" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="address">г. Москва, ул. Строителей, 15</p>
-      </div>
-      <div class="middle_column">
-        <ul class="footer_nav">
-          <li>
-            <a href="#" class="deliver_btn">Доставка</a>
-          </li>
-          <li>
-            <a href="#" class="guarantee_btn">Гарантия</a>
-          </li>
-          <li>
-            <a href="#" class="contacnts_btn">Контакты</a>
-          </li>
-        </ul>
-        <div class="social">
-          <ul class="social_list">
+        <div class="middle_row">
+          <p class="address">г. Москва, ул. Строителей, 15</p>
+          <ul class="footer_nav">
             <li>
-              <a href="#" class="social_btn">Facebook</a>
+              <a href="#" class="deliver_btn">Доставка</a>
             </li>
             <li>
-              <a href="#" class="social_btn">Instagram</a>
+              <a href="#" class="guarantee_btn">Гарантия</a>
             </li>
             <li>
-              <a href="#" class="social_btn">Twitter</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="right_column">
-        <div class="footer_user_actions">
-          <ul class="user_actions_list">
-            <li>
-              <a class="enter_btn" href="#">Войти</a>
-            </li>
-            <li>
-              <a class="compare_btn" href="#">Сравнить</a>
-            </li>
-            <li>
-              <a class="basket_btn" href="#">Корзина</a>
+              <a href="#" class="contacnts_btn">Контакты</a>
             </li>
           </ul>
           <p class="telephone">Тел: +7(495)495-95-95</p>
+        </div>
+        <div class="bottom_row">
+          <div class="footer_line"></div>
+          <div class="social">
+            <ul class="social_list">
+              <li>
+                <a href="#" class="social_btn">Facebook</a>
+              </li>
+              <li>
+                <a href="#" class="social_btn">Instagram</a>
+              </li>
+              <li>
+                <a href="#" class="social_btn">Twitter</a>
+              </li>
+            </ul>
+          </div>
           <a class="html_academy_logo_link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
           </a>
         </div>
       </div>
     </div>
+    <!-- <div class="left_column">
+          <div class="logo_container">
+            <a class="logo footer_logo" href="#">
+              <img src="img/logo_footer.svg" alt="DEVICE" width="162" height="35">
+            </a>
+          </div>
+          <p class="address">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="middle_column">
+          <ul class="footer_nav">
+            <li>
+              <a href="#" class="deliver_btn">Доставка</a>
+            </li>
+            <li>
+              <a href="#" class="guarantee_btn">Гарантия</a>
+            </li>
+            <li>
+              <a href="#" class="contacnts_btn">Контакты</a>
+            </li>
+          </ul>
+          <div class="social">
+            <ul class="social_list">
+              <li>
+                <a href="#" class="social_btn">Facebook</a>
+              </li>
+              <li>
+                <a href="#" class="social_btn">Instagram</a>
+              </li>
+              <li>
+                <a href="#" class="social_btn">Twitter</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right_column">
+          <div class="footer_user_actions">
+            <ul class="user_actions_list">
+              <li>
+                <a class="enter_btn" href="#">Войти</a>
+              </li>
+              <li>
+                <a class="compare_btn" href="#">Сравнить</a>
+              </li>
+              <li>
+                <a class="basket_btn" href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
+          <p class="telephone">Тел: +7(495)495-95-95</p>
+          <a class="html_academy_logo_link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+            <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
+          </a>
+        </div> -->
   </footer>
   <section class="popup_write_us">
     <button type="button" class="close_modal visually-hidden">Закрыть</button>
     <form action="#" method="POST" class="write_us_form">
-      <div class="write_us_item">
+      <div class="write_us_item write_us_name">
         <label for="name">Ваше имя:</label>
         <input type="text" name="name" id="name" placeholder="Имя Фамилия">
       </div>
-      <div class="write_us_item">
+      <div class="write_us_item write_us_mail">
         <label for="email">Ваш e-mail:</label>
         <input type="email" name="email" id="email" placeholder="email@example.com">
       </div>
-      <div class="write_us_item">
+      <div class="write_us_item write_us_text">
         <label for="mail_text">Текст письма:</label>
         <textarea id="mail_text" name="mail_text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </div>
