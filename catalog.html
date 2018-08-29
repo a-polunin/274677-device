@@ -13,7 +13,7 @@
     <div class="wrapper">
       <div class="head_container">
         <div class="logo_container">
-          <a class="logo" href="index.html">
+          <a class="logo" href="#">
             <img src="img/logo_header.svg" alt="DEVICE" width="163" height="35">
           </a>
         </div>
@@ -21,12 +21,12 @@
           <ul class="user_actions_list">
             <li>
               <form action="#" method="POST" class="search_form">
-                <label for="search_input" class="visually-hidden">Поиск</label>
+                <label for="search_input"></label>
                 <input type="search" id="search_input" name="search_input" placeholder="Поиск по сайту">
                 <button type="submit" class="search_btn">Найти</button>
               </form>
             </li>
-            <li>
+            <li class="login_item">
               <a href="#" class="name_surname">Валентин Петухов</a>
               <a href="#" class="exit">Выйти</a>
             </li>
@@ -40,37 +40,43 @@
         </div>
         <nav class="main_nav">
           <ul class="main_nav_list">
-            <li>
+            <li class="main_nav_item">
               <a href="#" class="catalog_btn">Каталог товаров</a>
               <ul class="sub_catalog_list">
-                <li>
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a href="#">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="#">Экшн-камеры</a>
-                </li>
-                <li>
-                  <a href="#">Фитнес-браслеты</a>
-                </li>
-                <li>
-                  <a href="#">Умные часы</a>
-                </li>
-                <li>
-                  <a href="#">Квадрокоптеры</a>
-                </li>
+                <div class="sub_catalog_list_column">
+                  <li>
+                    <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a href="#">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a href="#">Экшн-камеры</a>
+                  </li>
+                </div>
+                <div class="sub_catalog_list_column">
+                  <li>
+                    <a href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                    <a href="#">Умные часы</a>
+                  </li>
+                </div>
+                <div class="sub_catalog_list_column">
+                  <li>
+                    <a href="#">Квадрокоптеры</a>
+                  </li>
+                </div>
               </ul>
             </li>
-            <li>
+            <li class="main_nav_item">
               <a href="#" class="deliver_btn">Доставка</a>
             </li>
-            <li>
+            <li class="main_nav_item">
               <a href="#" class="guarantee_btn">Гарантия</a>
             </li>
-            <li>
-              <a href="#" class="contacnts_btn">Контакты</a>
+            <li class="main_nav_item">
+              <a href="#" class="contacts_btn">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -102,7 +108,7 @@
             <h2>Сортировка:</h2>
             <ul class="sorting_list">
               <li>
-                <a href="#">По цене</a>
+                <a href="#" class="active">По цене</a>
               </li>
               <li>
                 <a href="#">По типу</a>
@@ -112,8 +118,8 @@
               </li>
             </ul>
             <div class="sorting_arrows_container">
-              <a href="#" class="up_arrow visually-hidden">По возрастанию</a>
-              <a href="#" class="down_arrow visually-hidden">По убыванию</a>
+              <a href="#" class="up_arrow active"><span class="visually-hidden">По возрастанию</span></a>
+              <a href="#" class="down_arrow"><span class="visually-hidden">По убыванию</span></a>
             </div>
           </div>
         </div>
@@ -125,12 +131,12 @@
         <div class="filter_and_items_container">
           <div class="filter_container">
             <form class="filter_form" action="#" method="GET">
-              <fieldset class="range_filter">
-                <legend>Стоимость</legend>
+              <fieldset class="filter_item">
+                <b class="filter_item_name">Стоимость</b>
                 <input type="range" name="range">
               </fieldset>
-              <fieldset>
-                <legend>Цвет</legend>
+              <fieldset class="filter_item">
+                <b class="filter_item_name">Цвет</b>
                 <ul>
                   <li class="filter_option">
                     <input class="visually-hidden filter_input filter_input_checkbox" type="checkbox" id="black_color" name="black_color" checked>
@@ -154,8 +160,8 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
-                <legend>Bluetooth</legend>
+              <fieldset class="filter_item">
+                <b class="filter_item_name">Bluetooth</b>
                 <ul>
                   <li class="filter_option">
                     <input class="visually-hidden filter_input filter_input_radio" type="radio" id="yes_bluetoth" name="bluetoth_input" checked
@@ -425,23 +431,23 @@
               <a href="#" class="guarantee_btn">Гарантия</a>
             </li>
             <li>
-              <a href="#" class="contacnts_btn">Контакты</a>
+              <a href="#" class="contacts_btn">Контакты</a>
             </li>
           </ul>
-          <p class="telephone">Тел: +7(495)495-95-95</p>
+          <p class="telephone">Тел.: +7 (495) 495-95-95</p>
         </div>
         <div class="bottom_row">
           <div class="footer_line"></div>
           <div class="social">
             <ul class="social_list">
               <li>
-                <a href="#" class="social_btn">Facebook</a>
+                <a href="#" class="social_btn fb"><span class="visually-hidden">Facebook</span></a>
               </li>
               <li>
-                <a href="#" class="social_btn">Instagram</a>
+                <a href="#" class="social_btn instagram"><span class="visually-hidden">Instagram</span></a>
               </li>
               <li>
-                <a href="#" class="social_btn">Twitter</a>
+                <a href="#" class="social_btn twitter"><span class="visually-hidden">Twitter</span></a>
               </li>
             </ul>
           </div>
@@ -451,61 +457,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="left_column">
-          <div class="logo_container">
-            <a class="logo footer_logo" href="#">
-              <img src="img/logo_footer.svg" alt="DEVICE" width="162" height="35">
-            </a>
-          </div>
-          <p class="address">г. Москва, ул. Строителей, 15</p>
-        </div>
-        <div class="middle_column">
-          <ul class="footer_nav">
-            <li>
-              <a href="#" class="deliver_btn">Доставка</a>
-            </li>
-            <li>
-              <a href="#" class="guarantee_btn">Гарантия</a>
-            </li>
-            <li>
-              <a href="#" class="contacnts_btn">Контакты</a>
-            </li>
-          </ul>
-          <div class="social">
-            <ul class="social_list">
-              <li>
-                <a href="#" class="social_btn">Facebook</a>
-              </li>
-              <li>
-                <a href="#" class="social_btn">Instagram</a>
-              </li>
-              <li>
-                <a href="#" class="social_btn">Twitter</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="right_column">
-          <div class="footer_user_actions">
-            <ul class="user_actions_list">
-              <li>
-                <a href="#" class="name_surname">Валентин Петухов</a>
-                <a href="#" class="exit">Выйти</a>
-              </li>
-              <li>
-                <a class="compare_btn" href="#">Сравнить</a>
-              </li>
-              <li>
-                <a class="basket_btn" href="#">Корзина</a>
-              </li>
-            </ul>
-          </div>
-          <p class="telephone">Тел: +7(495)495-95-95</p>
-          <a class="html_academy_logo_link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-            <img class="html_academy_logo" src="img/icon_html_academy.svg" alt="HTML Academy" width="27" height="34">
-          </a>
-        </div>
-      </div> -->
   </footer>
 </body>
 
