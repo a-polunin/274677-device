@@ -171,13 +171,13 @@ input[type="radio"].visually-hidden {
   flex-grow: 1;
 }
 
-.user_actions .enter_btn,
-.user_actions .name_surname{
+.enter_btn,
+.name_surname{
   position: relative;
   padding-left: 27px;
 }
 
-.user_actions .name_surname{
+.name_surname{
   margin-right: 17px;
 }
 
@@ -208,7 +208,7 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon_compare.svg");
 }
 
-.user_actions .basket_btn{
+.basket_btn{
   position: relative;
   padding-left: 25px;
 }
@@ -352,13 +352,58 @@ input[type="radio"].visually-hidden {
   margin-bottom: 105px;
 }
 
-.slider_item{
+.slider_list{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide{
+  display: none;
+}
+
+.slider_controls{
+  position: absolute;
+  top: 340px;
+  right: 0;
+  z-index: 20;
+  font-size: 0;
+}
+
+.slider_controls label{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 21px;
+  vertical-align: top;
+  cursor: pointer;
+  background-image: url("../img/slider-button-empty.svg")
+}
+
+#product_1:checked ~ .wrapper #slide1,
+#product_2:checked ~ .wrapper #slide2,
+#product_3:checked ~ .wrapper #slide3 {
   display: flex;
+}
+
+#product_1:checked ~ .wrapper label[for="product_1"],
+#product_2:checked ~ .wrapper label[for="product_2"],
+#product_3:checked ~ .wrapper label[for="product_3"] {
+  background-image: url("../img/slider-button.svg")
+}
+
+.slider_item{
   justify-content: space-between;
 }
 
 .slider_item .img_container{
   width: 50%;
+}
+
+.slider_item_drone .img_container{
+  margin-top: 80px;
+  margin-left: -50px;
 }
 
 .slider_item_info{
@@ -375,6 +420,10 @@ input[type="radio"].visually-hidden {
   padding-right: 130px;
   font-size: 47px;
   line-height: 56px;
+}
+
+.slider_item_drone .slider_item_header{
+  padding-right: 0;
 }
 
 .slider_item_description{
@@ -552,8 +601,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/service_delivery.svg");
 }
 
-
-
 .services_list_item:first-of-type .btn:active{
   background: #000000;
 }
@@ -565,7 +612,7 @@ input[type="radio"].visually-hidden {
 }
 
 .brands{
-  margin-bottom: 130px;
+  margin-bottom: 73px;
 }
 
 .brands_list{
@@ -589,6 +636,7 @@ input[type="radio"].visually-hidden {
 
 .section_header{
   margin: 0;
+  margin-top: 50px;
   padding: 0;
   font-size: 47px;
   line-height: 48px;
@@ -615,6 +663,12 @@ input[type="radio"].visually-hidden {
   padding-right: 100px;
 }
 
+.line{
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+}
+
 .about_us .section_header{
   margin-bottom: 54px;
 }
@@ -628,10 +682,25 @@ input[type="radio"].visually-hidden {
   margin-top: 30px;
   margin-bottom: 68px;
   padding: 0;
-  padding-left: 35px;
   font-size: 16px;
   line-height: 40px;
   list-style: none;
+}
+
+.delivery_companies_list li{
+  position: relative;
+  padding-left: 35px;
+}
+
+.delivery_companies_list li::before{
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
 }
 
 .contacts{
@@ -670,7 +739,6 @@ input[type="radio"].visually-hidden {
 .middle_row,
 .bottom_row{
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -688,6 +756,7 @@ input[type="radio"].visually-hidden {
 
 .footer .address{
   margin: 0;
+  margin-right: 160px;
   padding: 0;
   font-family: "Open Sans", Arial,sans-serif;
   font-size: 15px;
@@ -709,9 +778,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer_line{
-  width: 80px;
-  height: 7px;
   background-color: #ffc600;
+  margin-right: 420px;
 }
 
 .social_list{
@@ -720,7 +788,6 @@ input[type="radio"].visually-hidden {
   width: 160px;
   margin: 0;
   padding: 0;
-  margin-left: -15px;
   list-style: none;
 }
 
@@ -758,6 +825,7 @@ input[type="radio"].visually-hidden {
 
 .footer_user_actions{
   display: flex;
+  margin-left: auto;
 }
 
 .footer_user_actions .user_actions_list{
@@ -765,8 +833,43 @@ input[type="radio"].visually-hidden {
   margin-bottom: 0;
 }
 
+.footer_user_actions .enter_btn::before,
+.footer_user_actions .name_surname::before{
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/icon_user_footer.svg");
+}
+
+.footer_user_actions .compare_btn{
+  padding-left: 20px;
+}
+
+.footer_user_actions .compare_btn::before{
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/icon_compare_footer.svg");
+}
+
+.footer_user_actions .basket_btn::before{
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/icon_cart_footer.svg");
+}
+
 .footer_user_actions li{
-  margin-right: 25px;
+  margin-right: 40px;
 }
 
 .footer_user_actions li:last-child{
@@ -775,12 +878,12 @@ input[type="radio"].visually-hidden {
 
 .footer_user_actions a{
   position: relative;
-  padding-left: 30px;
   color: rgba(255, 255, 255, 0.7);
 }
 
 .footer .telephone{
   margin: 0;
+  margin-left: auto;
   padding: 0;
   font-family: "Open Sans", Arial,sans-serif;
   font-size: 15px;
@@ -804,6 +907,10 @@ input[type="radio"].visually-hidden {
 
 .social_list a:active{
   opacity: 0.1;
+}
+
+.html_academy_logo_link{
+  margin-left: auto;
 }
 
 .html_academy_logo_link:hover,
@@ -1094,6 +1201,50 @@ button.btn{
   border-top: 2px solid black;
 }
 
+.range_filter{
+  width: 200px;
+  margin-top: 30px;
+}
+
+.range_controls{
+  position: relative;
+  height: 20px;
+  margin-bottom: 6px;
+}
+
+.range_controls .scale{
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range_controls .bar {
+  width: 60%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.range_controls .toggle {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range_controls .toggle_max{
+  left:100px;
+}
+
+.price_controls{
+  display: flex
+}
+
 .filter_item ul{
   margin: 0;
   margin-top: 25px;
@@ -1114,6 +1265,18 @@ button.btn{
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
+}
+
+.price_controls label{
+  font-family: "Gilroy", Arial,sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price_controls .min_price {
+  margin-right: 63px;
 }
 
 .filter_input_checkbox + label::before {
@@ -1318,6 +1481,5 @@ button.btn{
 .footer_user_actions .exit{
   color: #ffffff;
   opacity: 0.3;
-  padding-left: 20px;
 }
 
