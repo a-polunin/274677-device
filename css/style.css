@@ -275,9 +275,10 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: flex-start;
   width: 1100px;
-  margin-top: 18px; 
+  /* margin-top: 18px;  */
   margin-left: -580px;
   padding: 0;
+  padding-top: 18px;
   padding-left: 60px;
   padding-bottom: 40px;
   position: absolute;
@@ -319,7 +320,8 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.catalog_btn:hover ~ .sub_catalog_list{
+.catalog_btn:hover ~ .sub_catalog_list,
+.sub_catalog_list:hover{
   visibility: visible;
 }
 
@@ -377,8 +379,8 @@ input[type="radio"].visually-hidden {
 
 .slider_controls{
   position: absolute;
-  top: 340px;
-  right: 0;
+  top: 600px;
+  right: 150px;
   z-index: 20;
   font-size: 0;
 }
