@@ -40,9 +40,9 @@
         <nav class="main_nav">
           <ul class="main_nav_list">
             <li class="main_nav_item">
-              <a href="#" class="catalog_btn">Каталог товаров</a>
+              <a href="catalog.html" class="catalog_btn">Каталог товаров</a>
               <ul class="sub_catalog_list">
-                <div class="sub_catalog_list_column">
+                <ul class="sub_catalog_list_column">
                   <li>
                     <a href="#">Виртуальная реальность</a>
                   </li>
@@ -52,20 +52,20 @@
                   <li>
                     <a href="#">Экшн-камеры</a>
                   </li>
-                </div>
-                <div class="sub_catalog_list_column">
+                </ul>
+                <ul class="sub_catalog_list_column">
                   <li>
                     <a href="#">Фитнес-браслеты</a>
                   </li>
                   <li>
                     <a href="#">Умные часы</a>
                   </li>
-                </div>
-                <div class="sub_catalog_list_column">
+                </ul>
+                <ul class="sub_catalog_list_column">
                   <li>
                     <a href="#">Квадрокоптеры</a>
                   </li>
-                </div>
+                </ul>
               </ul>
             </li>
             <li class="main_nav_item">
@@ -229,23 +229,46 @@
     <section class="store_services">
       <div class="wrapper">
         <div class="services_container">
-          <ul class="services_list">
-            <li class="services_list_item">
-              <a href="#" class="btn">Доставка</a>
-            </li>
-            <li class="services_list_item">
-              <a href="#" class="btn">Гарантия</a>
-            </li>
-            <li class="services_list_item">
-              <a href="#" class="btn">Кредит</a>
-            </li>
-          </ul>
-          <div class="service_info delivery_service">
-            <div class="service_info_text">
-              <h3 class="section_header">Доставка</h3>
-              <p class="section_description">Мы с удовльствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </div>
+          <div class="services_left">
+            <ul class="services_list">
+              <li class="services_list_item">
+                <a href="#" class="btn" data-service-btn="delivery_btn">Доставка</a>
+              </li>
+              <li class="services_list_item">
+                <a href="#" class="btn" data-service-btn="guarantee_btn">Гарантия</a>
+              </li>
+              <li class="services_list_item">
+                <a href="#" class="btn" data-service-btn="credit_btn">Кредит</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services_right">
+            <ul class="service_info_list">
+              <li class="service_info_item showOn" id="delivery_service">
+                <div class="service_info delivery_service">
+                  <div class="service_info_text">
+                    <h3 class="section_header">Доставка</h3>
+                    <p class="section_description">Мы с удовльствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="service_info_item" style="display:none" id="guarantee_service">
+                <div class="service_info guarantee_service">
+                  <div class="service_info_text">
+                    <h3 class="section_header">Гарантия</h3>
+                    <p class="section_description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="service_info_item" style="display:none" id="credit_service">
+                <div class="service_info credit_service">
+                  <div class="service_info_text">
+                    <h3 class="section_header">Кредит</h3>
+                    <p class="section_description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -303,7 +326,7 @@
             <img src="img/map.jpg" alt="Улица строителей 15" width="560" height="222">
           </div>
           <div class="btn_container">
-            <a href="#" class="btn">Напишите нам</a>
+            <a href="#" class="btn write_us_btn">Напишите нам</a>
           </div>
         </section>
       </div>
@@ -370,8 +393,8 @@
       </div>
     </div>
   </footer>
-  <section class="popup_write_us">
-    <button type="button" class="close_modal visually-hidden">Закрыть</button>
+  <section class="modal popup_write_us">
+    <button type="button" class="close_modal"><span class="visually-hidden">Закрыть</span></button>
     <form action="#" method="POST" class="write_us_form">
       <div class="write_us_item write_us_name">
         <label for="name">Ваше имя:</label>
@@ -383,15 +406,16 @@
       </div>
       <div class="write_us_item write_us_text">
         <label for="mail_text">Текст письма:</label>
-        <textarea id="mail_text" name="mail_text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <textarea id="mail_text" name="mail_text" cols="30" rows="6" placeholder="В свободной форме"></textarea>
       </div>
       <button class="btn" type="submit">Отправить</button>
     </form>
   </section>
-  <section class="popup_map">
+  <section class="modal popup_map">
     <img src="img/map-big.jpg" alt="Улица Строителей 15" width="960" height="559">
-    <button type="button" class="close_modal visually-hidden">Закрыть</button>
+    <button type="button" class="close_modal"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

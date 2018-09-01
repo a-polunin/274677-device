@@ -83,7 +83,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header .wrapper{
-  background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
+  /* background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px); */
 }
 
 .head_container{
@@ -92,6 +92,7 @@ input[type="radio"].visually-hidden {
   padding-top: 23px;
   padding-left: 60px;
   padding-right: 60px;
+  background: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
 }
 
 .logo_container{
@@ -273,11 +274,14 @@ input[type="radio"].visually-hidden {
 .sub_catalog_list{
   display: flex;
   align-items: flex-start;
-  width: 1040px;
-  margin: 0;
-  margin-top: 26px; 
+  width: 1100px;
+  margin-top: 18px; 
+  margin-left: -580px;
   padding: 0;
+  padding-left: 60px;
+  padding-bottom: 40px;
   position: absolute;
+  left: 50%;
   background-color: #f7e296;
   font-family: "Open Sans", Arial,sans-serif;
   font-size: 15px;
@@ -286,17 +290,21 @@ input[type="radio"].visually-hidden {
   text-transform: none;
   list-style: none;
   visibility: hidden;
+  z-index: 10;
 }
 
 .sub_catalog_list .sub_catalog_list_column{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
   margin-right: 57px;
+  list-style: none;
 }
 
 .sub_catalog_list .sub_catalog_list_column:nth-child(2){
-  margin-right: 75px;
+  margin-right: 70px;
 }
 
 .logo:hover img,
@@ -311,6 +319,10 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.catalog_btn:hover ~ .sub_catalog_list{
+  visibility: visible;
+}
+
 .main_nav_list a:hover,
 .main_nav_list a:focus{
   color: rgba(0, 0, 0, 0.6);
@@ -319,7 +331,6 @@ input[type="radio"].visually-hidden {
 .main_nav_list a:active{
   color: rgba(0, 0, 0, 0.3);
 }
-
 
 .search_form input:hover::placeholder{
   color: rgba(0, 0, 0, 0.6);
@@ -344,12 +355,13 @@ input[type="radio"].visually-hidden {
 }
 
 .bg_slider{
-  background: linear-gradient(to bottom, #f7e296 113px, #ffffff 113px);
+  /* background: linear-gradient(to bottom, #f7e296 113px, #ffffff 113px); */
 }
 
 .slider{
   padding: 0 60px;
   margin-bottom: 105px;
+  background: linear-gradient(to bottom, #f7e296 113px, #ffffff 113px);
 }
 
 .slider_list{
@@ -532,13 +544,30 @@ input[type="radio"].visually-hidden {
 }
 
 .store_services{
-  min-height: 288px;
+  min-height: 388px;
   margin-bottom: 94px;
-  background: linear-gradient(to bottom, #ffffff 20px, #e5e5e5 20px);
+  background: linear-gradient(to bottom, #ffffff 106px, #e5e5e5 106px);
 }
 
 .services_container{
   display: flex;
+}
+
+.services_left{
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 24.5%;
+  padding-top: 85px;
+  padding-bottom: 70px;
+  height: 100%;
+  border-right: 7px solid black;
+}
+
+.services_right{
+  box-sizing: border-box;
+  width:75.5%;
 }
 
 .services_list{
@@ -549,7 +578,16 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.services_list::after{
+.service_info_list{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 119px;
+  padding-top: 85px;
+}
+
+/* .services_list::after{
   content: "";
   position: absolute;
   top: -80px;
@@ -557,7 +595,7 @@ input[type="radio"].visually-hidden {
   width: 7px;
   height: 320px;
   background-color: #000000;
-}
+} */
 
 .services_list_item{
   width: 160px;
@@ -575,6 +613,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service_info{
+  display: inline-
   position: relative;
 }
 
@@ -595,10 +634,30 @@ input[type="radio"].visually-hidden {
   content: "";
   position: absolute;
   top: 0;
-  right: -200px;
+  right: 0;
   width: 136px;
   height: 164px;
   background-image: url("../img/service_delivery.svg");
+}
+
+.guarantee_service::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 171px;
+  height: 195px;
+  background-image: url("../img/service_warranty.svg");
+}
+
+.credit_service::after{
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 156px;
+  height: 188px;
+  background-image: url("../img/service_credit.svg");
 }
 
 .services_list_item:first-of-type .btn:active{
@@ -618,20 +677,34 @@ input[type="radio"].visually-hidden {
 .brands_list{
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
   padding: 0;
   list-style: none;
 }
 
 .brand_item{
   display: flex;
-  width: 260px;
-  margin-right: 40px;
-  margin-bottom: 20px;
+  width: calc(25%-40px);
+  margin: 0 20px;
 }
 
-.brand_item:nth-child(4n){
-  margin-right: 0;
+.brand_item:hover img[alt="dji"]{
+  content: url("../img/brands_dji_colored.jpg")
+}
+
+.brand_item:hover img[alt="SP Gadgets"]{
+  content: url("../img/brands_gadgets_colored.jpg")
+}
+
+.brand_item:hover img[alt="GoPro"]{
+  content: url("../img/brands_gopro_colored.jpg")
+}
+
+.brand_item:hover img[alt="VIVE"]{
+  content: url("../img/brands_vive_colored.jpg")
 }
 
 .section_header{
@@ -721,6 +794,7 @@ input[type="radio"].visually-hidden {
   width: 560px;
   height: 222px;
   margin-bottom: 80px;
+  cursor: pointer;
 }
 
 .footer{
@@ -930,13 +1004,23 @@ button.btn{
   border: 0;
 }
 
-.popup_write_us{
+.modal{
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 50%;
   width: 960px;
-  margin: 0 auto;
+  margin-left: -480px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.popup_write_us{
   padding-top: 95px;
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 90px;
+  padding-bottom: 85px;
+  background-color: #ffffff;
 }
 
 .write_us_form{
@@ -946,9 +1030,15 @@ button.btn{
   justify-content: space-between;
 }
 
+.write_us_item{
+  display: flex;
+  flex-direction: column;
+}
+
 .write_us_name,
-.write_un_mail{
+.write_us_mail{
   width: 360px;
+  margin-bottom: 35px;
 }
 
 .write_us_text{
@@ -957,7 +1047,16 @@ button.btn{
 
 .popup_write_us input,
 .popup_write_us textarea{
+  padding: 13px 20px;
+  margin-top: 10px;
   background-color: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.popup_write_us textarea{
+  margin-bottom: 50px;
 }
 
 .popup_write_us input::placeholder,
@@ -978,8 +1077,15 @@ button.btn{
 
 .close_modal{
   position: absolute;
-  background-color: #f0c52e;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-image: url("../img/modal-close.svg");
   opacity: 0.5;
+  border: 0;
+  padding: 0;
 }
 
 .close_modal:hover,
@@ -989,6 +1095,10 @@ button.btn{
 
 .close_modal:active{
   opacity: 0.3;
+}
+
+.popup_map{
+  height: 559px;
 }
 
 .exit{
@@ -1483,3 +1593,6 @@ button.btn{
   opacity: 0.3;
 }
 
+.showOn{
+  display: block;
+}
