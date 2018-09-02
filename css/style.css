@@ -356,14 +356,11 @@ input[type="radio"].visually-hidden {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.bg_slider{
-  /* background: linear-gradient(to bottom, #f7e296 113px, #ffffff 113px); */
-}
-
 .slider{
   padding: 0 60px;
   margin-bottom: 105px;
   background: linear-gradient(to bottom, #f7e296 113px, #ffffff 113px);
+  
 }
 
 .slider_list{
@@ -408,8 +405,28 @@ input[type="radio"].visually-hidden {
 }
 
 .slider_item{
+  position: relative;
   justify-content: space-between;
+  counter-reset: item;
 }
+.slide_number{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 180px;
+  line-height: 180px;
+  color: #ffffff;
+}
+
+/* .slider_item::after{
+  counter-increment: item;
+  content: counter(item);
+  font-size: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
 
 .slider_item .img_container{
   width: 50%;
@@ -615,7 +632,7 @@ input[type="radio"].visually-hidden {
 }
 
 .service_info{
-  display: inline-
+  display: flex;
   position: relative;
 }
 
@@ -689,24 +706,38 @@ input[type="radio"].visually-hidden {
 
 .brand_item{
   display: flex;
-  width: calc(25%-40px);
+  width: calc(25% - 40px);
   margin: 0 20px;
 }
 
-.brand_item:hover img[alt="dji"]{
-  content: url("../img/brands_dji_colored.jpg")
+.brand_item_link{
+  position: relative;
 }
 
-.brand_item:hover img[alt="SP Gadgets"]{
-  content: url("../img/brands_gadgets_colored.jpg")
+.brand_item_link:hover::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
-.brand_item:hover img[alt="GoPro"]{
-  content: url("../img/brands_gopro_colored.jpg")
+.brand_dji_link:hover::before{
+  background-image: url("../img/brands_dji_colored.jpg");
 }
 
-.brand_item:hover img[alt="VIVE"]{
-  content: url("../img/brands_vive_colored.jpg")
+.brand_spg_link:hover::before{
+  background-image: url("../img/brands_gadgets_colored.jpg");
+}
+
+.brand_gopro_link:hover::before{
+  background-image: url("../img/brands_gopro_colored.jpg");
+}
+
+.brand_vivo_link:hover::before{
+  background-image: url("../img/brands_vive_colored.jpg");
 }
 
 .section_header{
@@ -1170,9 +1201,9 @@ button.btn{
 
 .sorting_filter_row{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   min-height: 70px;
-  background: linear-gradient(to right, #dbdbdb 31.6%, #ebebeb 31.6%);
+  background: linear-gradient(to right, #dbdbdb 50%, #ebebeb 50%);
 }
 
 .sorting_filter_row>.wrapper{
@@ -1183,10 +1214,14 @@ button.btn{
   display: flex;
   flex-direction: row;
   padding-left: 60px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .fliter_header{
-  width: 270px;
+  /* width: 270px; */
+  width: 23.1%;
+  background-color: #dbdbdb;
 }
 
 .fliter_header h2{
@@ -1203,6 +1238,8 @@ button.btn{
   align-items: center;
   padding-left: 72px;
   flex-grow: 1;
+  width: 76.9%;
+  background-color: #ebebeb;
 }
 
 .sorting_container h2{
@@ -1286,7 +1323,7 @@ button.btn{
 
 .filter_and_items{
   min-height: 370px;
-  background: linear-gradient(to right, #eeeeee 31.6%, #ffffff 31.6%);
+  background: linear-gradient(to right, #eeeeee 50%, #ffffff 50%);
 }
 
 .filter_and_items_container{
@@ -1295,9 +1332,10 @@ button.btn{
 }
 
 .filter_container{
-  width: 270px;
+  width: 23.1%;
   padding-left: 60px;
   padding-top: 69px;
+  background-color: #eeeeee;
 }
 
 .filter_form{
@@ -1432,9 +1470,10 @@ button.btn{
 }
 
 .catalog_items_container{
-  width: 760px;
+  width: 76.9%;
   padding-left: 70px;
   padding-top: 69px;
+  background-color: #ffffff;
 }
 
 .catalog_items_list{
