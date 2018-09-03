@@ -407,26 +407,17 @@ input[type="radio"].visually-hidden {
 .slider_item{
   position: relative;
   justify-content: space-between;
-  counter-reset: item;
 }
+
 .slide_number{
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 0;
   font-size: 180px;
   line-height: 180px;
   color: #ffffff;
+  z-index: 1;
 }
-
-/* .slider_item::after{
-  counter-increment: item;
-  content: counter(item);
-  font-size: 50px;
-  line-height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 
 .slider_item .img_container{
   width: 50%;
@@ -438,6 +429,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider_item_info{
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -445,12 +437,13 @@ input[type="radio"].visually-hidden {
 
 .slider_item_header{
   margin: 0;
-  margin-top: 80px;
+  margin-top: 37px;
   margin-bottom: 29px;
   padding: 0;
   padding-right: 130px;
   font-size: 47px;
   line-height: 56px;
+  z-index: 10;
 }
 
 .slider_item_drone .slider_item_header{
@@ -480,6 +473,21 @@ input[type="radio"].visually-hidden {
 
 .slider_item_info .btn_container{
   margin-bottom: 51px;
+}
+
+.slider_item_property{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.slider_item_property td{
+  white-space: nowrap;
+  padding-right: 80px;
+}
+
+.slider_item_property td:last-child{
+  width: 100%;
 }
 
 .slider_item_property tr:first-child{
@@ -773,6 +781,13 @@ input[type="radio"].visually-hidden {
   width: 80px;
   height: 7px;
   background-color: #000000;
+}
+
+.slider_line{
+  width: 100px;
+  height: 7px;
+  margin-top: 39px;
+  background-color: #ffffff;
 }
 
 .about_us .section_header{

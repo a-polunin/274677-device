@@ -1,5 +1,9 @@
 const writeUsBtn = document.querySelector(".write_us_btn");
 const writeUsModal = document.querySelector(".popup_write_us");
+const writeUsForm = writeUsModal.querySelector("form");
+const name = writeUsModal.querySelector("[name=name]");
+const email = writeUsModal.querySelector("[name=email]");
+const mailText = writeUsModal.querySelector("[name=mail_text]");
 const mapContainer = document.querySelector(".map_container");
 const mapModal = document.querySelector(".popup_map");
 const serviceList = document.querySelector(".services_list");
@@ -8,6 +12,7 @@ const serviceInfoItems = document.querySelector(".service_info_item");
 writeUsBtn.addEventListener("click",(e)=>{
   e.preventDefault();
   writeUsModal.style.display = "block";
+  login.focus();
 });
 
 writeUsModal.querySelector(".close_modal").addEventListener("click",()=>{
@@ -23,7 +28,7 @@ mapModal.querySelector(".close_modal").addEventListener("click",()=>{
   mapModal.style.display = "none";
 });
 
-serviceList.addEventListener("click",function(e){
+serviceList.addEventListener("click",(e)=>{
   if(!e.target.hasAttribute("data-service-btn")) return false;
   e.preventDefault();
 
@@ -41,4 +46,3 @@ serviceList.addEventListener("click",function(e){
     credit_service.style.display = "block";
   }
 });
-
