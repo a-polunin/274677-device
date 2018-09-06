@@ -241,17 +241,17 @@
         <div class="services_container">
           <ul class="services_list">
             <li class="services_list_item">
-              <a href="#" class="btn" data-service-btn="delivery_btn">Доставка</a>
+              <a href="#" class="btn service_active" data-service-btn="delivery_btn" id="delivery_service_btn">Доставка</a>
             </li>
             <li class="services_list_item">
-              <a href="#" class="btn" data-service-btn="guarantee_btn">Гарантия</a>
+              <a href="#" class="btn" data-service-btn="guarantee_btn" id="guarantee_service_btn">Гарантия</a>
             </li>
             <li class="services_list_item">
-              <a href="#" class="btn" data-service-btn="credit_btn">Кредит</a>
+              <a href="#" class="btn" data-service-btn="credit_btn" id="credit_service_btn">Кредит</a>
             </li>
           </ul>
           <ul class="service_info_list">
-            <li class="service_info_item showOn" id="delivery_service">
+            <li class="service_info_item show_on" id="delivery_service">
               <div class="service_info delivery_service">
                 <div class="service_info_text">
                   <h3 class="section_header">Доставка</h3>
@@ -260,7 +260,7 @@
                 </div>
               </div>
             </li>
-            <li class="service_info_item" style="display:none" id="guarantee_service">
+            <li class="service_info_item show_off" id="guarantee_service">
               <div class="service_info guarantee_service">
                 <div class="service_info_text">
                   <h3 class="section_header">Гарантия</h3>
@@ -269,7 +269,7 @@
                 </div>
               </div>
             </li>
-            <li class="service_info_item" style="display:none" id="credit_service">
+            <li class="service_info_item show_off" id="credit_service">
               <div class="service_info credit_service">
                 <div class="service_info_text">
                   <h3 class="section_header">Кредит</h3>
@@ -420,7 +420,8 @@
     </form>
   </section>
   <section class="modal popup_map">
-    <img src="img/map-big.jpg" alt="Улица Строителей 15" width="960" height="559">
+    <p><img src="img/map-big.jpg" alt="Улица Строителей 15" width="960" height="559"></p>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8c0c4d584525d44ab9bbfd237a4d2907e2f08f1db951eb6df7cb4d8f234f7340&amp;source=constructor" width="960" height="559" frameborder="0"></iframe>
     <button type="button" class="close_modal"><span class="visually-hidden">Закрыть</span></button>
   </section>
   <script src="js/script.js"></script>
