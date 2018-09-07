@@ -1279,8 +1279,9 @@ button.btn{
   display: flex;
   align-items: center;
   padding-left: 60px;
-  width: 27.1%;
+  width: 28.34%;
   background-color: #dbdbdb;
+  box-sizing: border-box;
 }
 
 .filter_header h2{
@@ -1298,8 +1299,9 @@ button.btn{
   min-height: 70px;
   padding-left: 72px;
   flex-grow: 1;
-  width: 76.9%;
+  width: 71.66%;
   background-color: #ebebeb;
+  box-sizing: border-box;
 }
 
 .sorting_container h2{
@@ -1394,10 +1396,11 @@ button.btn{
 }
 
 .filter_container{
-  width: 27.1%;
+  width: 28.34%;
   padding-left: 60px;
   padding-top: 69px;
   background-color: #eeeeee;
+  box-sizing: border-box;
 }
 
 .filter_form{
@@ -1537,10 +1540,11 @@ button.btn{
 }
 
 .catalog_items_container{
-  width: 76.9%;
-  padding-left: 74px;
+  width: 71.66%;
+  padding-left: 71px;
   padding-top: 69px;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 .catalog_items_list{
@@ -1552,6 +1556,7 @@ button.btn{
 }
 
 .catalog_item{
+  position: relative;
   width: 360px;
   margin-bottom: 46px;
 }
@@ -1623,6 +1628,18 @@ button.btn{
 
 .catalog_item .img_container:hover .catalog_item_hover{
   display: block;
+}
+
+.new_label::before{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 61px;
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  background-image: url("../img/new_label.png");
+  z-index: 20;
 }
 
 .add_to_compare:hover,
