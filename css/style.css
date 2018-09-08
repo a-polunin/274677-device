@@ -400,15 +400,15 @@ input[type="radio"].visually-hidden{
   background-image: url("../img/slider-button-empty.svg");
 }
 
-#product_1:checked ~ .wrapper #slide1,
-#product_2:checked ~ .wrapper #slide2,
-#product_3:checked ~ .wrapper #slide3{
+.product_1:checked ~ .wrapper #slide1,
+.product_2:checked ~ .wrapper #slide2,
+.product_3:checked ~ .wrapper #slide3{
   display: flex;
 }
 
-#product_1:checked ~ .wrapper label[for="product_1"],
-#product_2:checked ~ .wrapper label[for="product_2"],
-#product_3:checked ~ .wrapper label[for="product_3"]{
+.product_1:checked ~ .wrapper label[for="product_1"],
+.product_2:checked ~ .wrapper label[for="product_2"],
+.product_3:checked ~ .wrapper label[for="product_3"]{
   background-image: url("../img/slider-button.svg")
 }
 
@@ -495,7 +495,7 @@ input[type="radio"].visually-hidden{
 
 .slider_item_info .btn_container{
   margin-bottom: 47px;
-  padding-left: 5px;;
+  padding-left: 5px;
 }
 
 .slider_item_property{
